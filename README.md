@@ -14,7 +14,8 @@ This repository is meant to be FORKED and then you can make pull request to this
 
 ## Developing
 
-Add your answers to file `methods.js`
+1. Check what kind of output every function should have from `methods.test.js` file
+2. Add your answers to `methods.js`
 
 ## Testing
 
