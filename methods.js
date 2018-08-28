@@ -8,16 +8,17 @@ module.exports = {
     return fullNames;
   },
   ariNotSuspended(students) {
-    const ariNotSuspended = students.map(student => {
+    const ariNotSus = students.map(student => {
       if(student.name.first === 'Ari' && student.name.last === 'Liukkonen') {
-          student.suspended = false;
+        return {...student, suspended: false};
       }
-      return student;
+        return student;
       });
-    return ariNotSuspended;
+    return ariNotSus;
   },
   gradesBelow8(students) {
-    return students;
+    const gradesBelow8 = students.filter(student => student.grade < 8);
+    return gradesBelow8;
   },
   gradesBelow8orOver9(students) {
     return students;
