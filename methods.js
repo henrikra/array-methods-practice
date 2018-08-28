@@ -1,9 +1,11 @@
 module.exports = {
   firstNamesOnly(students) {
-    return students;
+    const firstNames = students.map(student => student.name.first);
+    return firstNames;
   },
   fullNamesOnly(students) {
-    return students;
+    const fullNames = students.map(student => `${student.name.first} ${student.name.last}`);
+    return fullNames;
   },
   ariNotSuspended(students) {
     return students;
