@@ -21,7 +21,8 @@ module.exports = {
     return gradesBelow8;
   },
   gradesBelow8orOver9(students) {
-    return students;
+    const gradesBelow8orOver9 = students.filter(student => student.grade < 8 || student.grade > 9);
+    return gradesBelow8orOver9;
   },
   collectiveGrade(students) {
     return students;
