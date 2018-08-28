@@ -25,7 +25,8 @@ module.exports = {
     return gradesBelow8orOver9;
   },
   collectiveGrade(students) {
-    return students;
+    const collectiveGrade = students.reduce((a,b) => a + b.grade, 0);
+    return collectiveGrade;
   },
   groupedByGrade(students) {
     return students;
