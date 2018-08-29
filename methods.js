@@ -8,13 +8,13 @@ module.exports = {
     return fullNames;
   },
   ariNotSuspended(students) {
-    const ariNotSus = students.map(student => {
+    const ariNotSuspended = students.map(student => {
       if(student.name.first === 'Ari' && student.name.last === 'Liukkonen') {
         return {...student, suspended: false};
       }
         return student;
       });
-    return ariNotSus;
+    return ariNotSuspended;
   },
   gradesBelow8(students) {
     const gradesBelow8 = students.filter(student => student.grade < 8);
@@ -29,6 +29,11 @@ module.exports = {
     return collectiveGrade;
   },
   groupedByGrade(students) {
-    return students;
+    const groupedByGrade = students.reduce(function (obj, student) {
+      obj[student.grade] = obj[student.grade] || [];
+      obj[student.grade].push(student);
+      return obj;
+  }, {});
+    return groupedByGrade;
   },
 }
